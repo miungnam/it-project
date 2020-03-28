@@ -53,9 +53,23 @@ header{
 .top-menu_item{
     color: white;
     font-size: 16px;
-
+    position: relative;
     font-weight: 500;
     margin-left: 40px;
+}
+.top-menu_item:before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    transform: scale(0);
+    transition: .5s;
+}
+.top-menu_item:hover:before{
+    transform: scale(1);
 }
 h5{
     font-size: 16px;
@@ -80,19 +94,43 @@ button{
     border: none;
     color: white;
     line-height: 20px;
+    transition: 2s;
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translatex(0);
+    }
+
+    40% {
+        transform: translatex(-20px);
+    }
+
+    80% {
+        transform: translatex(-10px);
+    }
+}
+button:hover{
+
+    animation: bounce .5s;
+    box-shadow: 0 0 20px 4px cyan;
+}
+button a{
+    color: #fff;
+
 }
 #box{
     max-width: 1110px;
     text-align: center;
     margin:0 auto;
 }
-#box h2{
+.box-title h2{
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 53px;
     color: #323232;
     border-bottom: 50px;
+    padding: 110px 0 0 0;
 
 }
 #box p{
@@ -125,7 +163,6 @@ button{
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
     border-radius: 50%;
-
 }
 .smallcircle{
     position: relative;
@@ -149,7 +186,6 @@ button{
     color: #000000;
     width: 226px;
     height: 23px;
-
 }
 .lorem{
     width: 222px;
@@ -170,21 +206,18 @@ button{
     margin-top: 55px;
 }
 
-
 #about{
     padding: 100px 0 70px 0;
     background: #F6F6F8;
 }
 .col-6{
     width: 50%;
-
 }
 .about-title{
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 53px;
-    /* dark */
     padding-top: 52px;
     color: #323232;
 }
@@ -193,8 +226,6 @@ button{
     font-weight: normal;
     font-size: 16px;
     line-height: 25px;
-
-    /* grey */
     margin-bottom: 30px;
     color: #999999;
 }
@@ -203,12 +234,7 @@ button{
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height */
-
     text-decoration-line: underline;
-
-    /* Accent */
-
     color: #4985FF;
 }
 .about-list-desk{
@@ -217,9 +243,6 @@ button{
     font-size: 16px;
     line-height: 25px;
     text-align: left;
-
-    /* grey */
-
     color: #999999;
 }
 .about-list-item{
@@ -230,20 +253,16 @@ button{
     text-align: center;
     margin-top: 70px;
     background: #F6F6F8;
-
 }
 .about-list-icon span{
     font-size: 36px;
     line-height: 53px;
     padding-left: 20px;
     color: #000000;
-
-
 }
 .about-list-icon{
     display: flex;
     align-items: center;
-
 }
 #about .under-line{
     position: relative;
@@ -256,13 +275,12 @@ button{
     right: 0;
     margin: auto;
     bottom: 0;
-    width: calc(100% - 30px);
+    width: calc(100% - 36px);
     height: 1px;
     background: #e0e0e0;
 }
 #works{
     position: relative;
-
 }
 #works:before{
     content: '';
@@ -274,7 +292,6 @@ button{
     z-index: -1;
     background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
 }
-
 
 .works-header{
     display:flex;
@@ -288,14 +305,10 @@ button{
     font-weight: bold;
     font-size: 36px;
     line-height: 53px;
-
     color: #FFFFFF;
-
 }
 .col-5{
     width: 33.3333%;
-
-
 }
 .works-list{
     display: flex;
@@ -307,7 +320,6 @@ button{
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-
     color: #4985FF;
     padding:25px 0 25px;
 }
@@ -323,7 +335,6 @@ button{
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-
     color: black;
 }
 .line{
@@ -356,7 +367,6 @@ button{
     margin: 0 auto;
     color: #000000;
     padding:95px 0 50px;
-
 }
 .project-text{
     font-style: normal;
@@ -365,13 +375,10 @@ button{
     line-height: 25px;
     text-align: center;
     padding-bottom: 70px;
-    /* grey */
-
     color: #999999;
 }
 .col-4{
     width: 25%;
-
 }
 .project-list{
     display: flex;
@@ -404,7 +411,6 @@ button{
     font-size: 36px;
     line-height: 53px;
     text-align: center;
-
     margin: 0 auto;
     padding: 70px 0 30px;
 }
@@ -428,7 +434,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .play-btn{
@@ -439,7 +444,6 @@ button{
     padding: 20px 40px;
     align-items: center;
     color: #FFFFFF;
-
 }
 .icon{
     width: 60px;
@@ -460,7 +464,6 @@ button{
     text-align: center;
     margin-bottom: 20px;
     color: #000000;
-
 }
 .subscribe-text{
     font-style: normal;
@@ -468,15 +471,11 @@ button{
     font-size: 16px;
     line-height: 25px;
     text-align: center;
-
-    /* grey */
-
     color: #999999;
 }
 .forms{
     display: flex;
     justify-content: center;
-
 }
 .subscribe-forms{
     width: 489px;
@@ -484,7 +483,6 @@ button{
     margin: 30px 0 35px;
     border: 1px solid #F2F2F2;
     box-sizing: border-box;
-
     border-radius: 30px;
 }
 input[type="email"],input::-webkit-input-placeholder {
@@ -519,7 +517,6 @@ footer{
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-
     color: #000000;
 }
 .inner-grid{
@@ -533,7 +530,6 @@ footer{
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
-    /* grey */
     color: #999999;
 }
 .inner-grid > div span{
@@ -561,8 +557,6 @@ footer{
     line-height: 21px;
     text-align: center;
     padding-bottom: 30px;
-    /* grey */
-
     color: #999999;
 }
 
