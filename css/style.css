@@ -33,8 +33,7 @@ header{
     align-items: center;
 }
 #hero{
-    background: url("https://s8.hostingkartinok.com/uploads/images/2020/03/33517aa9dc98c31496cc12aa3a6a1486.png") center/cover;
-
+    background: black;
     height: 100vh;
     display: flex;
 }
@@ -387,7 +386,7 @@ button a{
     margin: 45px 0 135px ;
 }
 #video{
-    background: url("https://s8.hostingkartinok.com/uploads/images/2020/03/b5a201dd2231ae281022784d8ccd38ab.png") no-repeat;
+    background: black;
     height: 570px;
     color: #fFFFFF;
     position: relative;
